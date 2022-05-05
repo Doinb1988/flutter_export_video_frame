@@ -62,13 +62,13 @@ public class ExportVideoFramePlugin implements MethodCallHandler {
 
   @Override
   public void onMethodCall(MethodCall call, final Result result) {
-    if (!PermissionManager.current().isPermissionGranted()) {
-      PermissionManager.current().askForPermission();
-    }
-    if (!(FileStorage.isExternalStorageReadable() && FileStorage.isExternalStorageWritable())) {
-      result.error("File permission exception","Not get external storage permission",null);
-      return;
-    }
+//    if (!PermissionManager.current().isPermissionGranted()) {
+//      PermissionManager.current().askForPermission();
+//    }
+//    if (!(FileStorage.isExternalStorageReadable() && FileStorage.isExternalStorageWritable())) {
+//      result.error("File permission exception","Not get external storage permission",null);
+//      return;
+//    }
 
     switch (call.method) {
       case "cleanImageCache": {

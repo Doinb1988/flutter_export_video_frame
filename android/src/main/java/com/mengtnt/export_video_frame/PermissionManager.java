@@ -50,15 +50,15 @@ final class PermissionManager {
     }
 
     boolean isPermissionGranted() {
-        Boolean isRead = ActivityCompat.checkSelfPermission(activity, Manifest.permission.READ_EXTERNAL_STORAGE)
-                == PackageManager.PERMISSION_GRANTED;
-        Boolean isWrite = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                == PackageManager.PERMISSION_GRANTED;
-        return isRead && isWrite;
+//        Boolean isRead = ActivityCompat.checkSelfPermission(activity, Manifest.permission.READ_EXTERNAL_STORAGE)
+//                == PackageManager.PERMISSION_GRANTED;
+//        Boolean isWrite = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+//                == PackageManager.PERMISSION_GRANTED;
+        return true;
     }
 
     void askForPermission() {
-        ActivityCompat.requestPermissions(activity,grantName, REQUEST_EXTERNAL_STORAGE_PERMISSION);
+//        ActivityCompat.requestPermissions(activity,grantName, REQUEST_EXTERNAL_STORAGE_PERMISSION);
     }
 
 }
